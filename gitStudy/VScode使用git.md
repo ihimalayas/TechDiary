@@ -20,7 +20,6 @@
 
     git init
 
-
 ## 添加用户名和邮箱。该用户名和邮箱是注册GitHub时使用的用户名和邮箱:
 
     git config --global user.name "ihimalayas"
@@ -31,66 +30,69 @@
     继续在该目录下输入：
     ssh-keygen -t rsa -C "ccbguodawei@126.com"
 
-```
-C:\Users\inkS\Desktop\pyProject>ssh-keygen -t rsa -C "ccbguodawei@126.com"
-Generating public/private rsa key pair.
-Enter file in which to save the key (C:\Users\inkS/.ssh/id_rsa): id_rsa
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in id_rsa.
-Your public key has been saved in id_rsa.pub.
-The key fingerprint is:
-SHA256:Vr50A4LcmoEL+O3MJUDlhjATlonHAqznJ8ROR3fPiVw ccbguodawei@126.com
-The key's randomart image is:
-+---[RSA 2048]----+
-|X++..            |
-|+Xoo.o.o. E      |
-|o++.+.+oo=o.     |
-|..==.. +o++.     |
-| *..+ + S o o    |
-|  ++.o . . o .   |
-|   o+     .      |
-|                 |
-|                 |
-+----[SHA256]-----+
-```
+    ```
+    C:\Users\inkS\Desktop\pyProject>ssh-keygen -t rsa -C "ccbguodawei@126.com"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (C:\Users\inkS/.ssh/id_rsa): D:\workSpace\ssh-key
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    Your identification has been saved in id_rsa.
+    Your public key has been saved in id_rsa.pub.
+    The key fingerprint is:
+    SHA256:Vr50A4LcmoEL+O3MJUDlhjATlonHAqznJ8ROR3fPiVw ccbguodawei@126.com
+    The key's randomart image is:
+    +---[RSA 2048]----+
+    |X++..            |
+    |+Xoo.o.o. E      |
+    |o++.+.+oo=o.     |
+    |..==.. +o++.     |
+    | *..+ + S o o    |
+    |  ++.o . . o .   |
+    |   o+     .      |
+    |                 |
+    |                 |
+    +----[SHA256]-----+
+    ```
 
-> 命令执行完毕会生成一个名为id_rsa.pub的文件。利用文本编辑器打开该文件，全文复制。
+> 命令执行完毕会生成一个名为ssh-key.pub的文件。利用文本编辑器打开该文件，全文复制。
 
-打开GitHub上的TechDiary仓库，进入setting，设置deploy keys，将id_rsa.pub中的内容粘贴进去即可。
-
+打开GitHub上的TechDiary仓库，进入setting，设置deploy keys，将ssh-key.pub中的内容粘贴进去即可。
 
 ## 绑定本地文件夹和GitHub仓库：
-git remote add origin https://github.com/ihimalayas/TechDiary.git
+
+    git remote add origin https://ihimalayas:************@github.com/ihimalayas/TechDiary.git
+
+## 设置完成后可以做一下连接测试
 
 
-## 设置完成后可以做一下连接测试：
+    ssh -T git@github.com
 
-ssh -T git@github.com
+## github.com关于新建仓库和已存在仓库连接方式
 
-
-## 先进行一次拉取，再进行一次推送：
-
-git pull TechDiary master
-
-git push --force TechDiary master
-
-
-
-git pull origin master
-
-git remote add TechDiary https://github.com/ihimalayas/TechDiary.git
-
-
-## github.com
-
-…or create a new repository on the command line
+    1. create a new repository on the command line
         echo "# datascience" >> README.md
         git init
         git add README.md
         git commit -m "first commit"
         git remote add origin https://github.com/ihimalayas/datascience.git
         git push -u origin master
-…or push an existing repository from the command line
+    2. push an existing repository from the command line
         git remote add origin https://github.com/ihimalayas/datascience.git
         git push -u origin master
+
+## 小结
+
+### 使用Github版本源文件管理的过程是：
+
+    1. 安装了Git
+    2. 有Github账号，并且创建了对应仓库
+    3. VSCode中为项目初始化了git init有了.git文件夹
+    4. 设置了remote，链接到Github远程仓库
+    5. 先要推送到本地Git仓库，就是Ctrl+回车
+    6. 从菜单推送到远程Github仓库
+
+> 之后如果代码文件有了修改，那么就可以直接
+>
+> - Ctrl+回车提交到本地Git，
+> - 再菜单推送到Github，
+> - 反复如此即可。
