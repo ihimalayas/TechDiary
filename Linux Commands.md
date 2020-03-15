@@ -1,0 +1,13 @@
+# Linux Commands
+
+## 检查端口被哪个进程占用
+
+    netstat -lnpt |grep 5672
+
+## 查看进程的详细信息
+
+    ps 6832
+
+## 中止进程
+
+    kill -9 683
