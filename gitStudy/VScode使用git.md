@@ -62,10 +62,17 @@
 
     git remote add origin https://ihimalayas:************@github.com/ihimalayas/TechDiary.git
 
+    1. 如果输错了需要修改，可以删除.git文件重新init
+    2. 或者使用下面的命令修改地址：git remote set-url origin https://username:password@github.com/ihimalayas/TechDiary.git
+    3. 或者用下面的命令只删掉remote设置：git remote remove origin
+
 ## 设置完成后可以做一下连接测试
 
-
     ssh -T git@github.com
+
+## 从远程Github拉取（复制、克隆）项目文件
+
+    git pull origin master
 
 ## github.com关于新建仓库和已存在仓库连接方式
 
