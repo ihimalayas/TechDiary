@@ -2,4 +2,5 @@
     "editor.fontSize": 12,
     "terminal.integrated.shellArgs.windows": ["/K chcp 65001 >nul"],
     "terminal.integrated.fontFamily": "Lucida Console",
+    "python.formatting.provider": "black",
 }
