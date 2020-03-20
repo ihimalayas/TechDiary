@@ -18,7 +18,7 @@
 
 ## linux操作系统下，怎么使用kill按照PID一次杀死多个进程
 
-    ps -ef | grep meross | grep -v grep | cut -c 9-15 | xargs kill -s 9
+    ps -ef | grep ccbft | grep -v grep | cut -c 9-15 | xargs kill -s 9
     ps -ef | grep meross | grep -v grep | awk '{print $2}' | xargs kill -s 9
 
 > 说明：
@@ -32,3 +32,25 @@
 ## 计算ls命令后显示的文件个数
 
     ls -al | wc -l
+
+
+## nginx 重启等操作
+
+
+### 进入nginx安装目录sbin下，输入命令./nginx -t
+
+    [root@vm-20202141951290001 sbin]# ./nginx -t
+    nginx: the configuration file /opt/data/regulation/nginx/conf/nginx.conf syntax is ok
+    nginx: configuration file /opt/data/regulation/nginx/conf/nginx.conf test is successful
+
+> 看到如下显示：nginx.conf syntax is ok，nginx.conf test is successful说明配置文件正确！
+
+### 重启Nginx服务
+
+- 方法一
+    
+    进入nginx可执行目录sbin下，输入命令./nginx -s reload 
+
+- 方法二
+
+  查找当前nginx进程号，然后输入命令：kill -HUP 进程号 ，实现重启nginx服务
