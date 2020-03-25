@@ -72,5 +72,5 @@ print("system has successfully started " + str(start_success_num) + "  Apps!")
 for j in all_app_list:
     print(j + "-"*(60-len(j)) + "Wrong!")
 
-print("system has Failed to startup  " + str(len(all_app_list)) + "  Apps!")
+print("system has Failed  to   startup  " + str(len(all_app_list)) + "  Apps!")
 
