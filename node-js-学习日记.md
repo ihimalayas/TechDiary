@@ -13,7 +13,7 @@
     npm config list -l //查看所有配置
 
 ### npm本地安装与全局安装有什么区别？
-    
+
     npm install grunt // 本地安装，则是将模块下载到当前命令行所在目录。
     npm install -g grunt//全局安装，模块将被下载安装到【全局目录】中；
 
