@@ -54,3 +54,28 @@
 - 方法二
 
   查找当前nginx进程号，然后输入命令：kill -HUP 进程号 ，实现重启nginx服务
+
+
+## vim 的快捷用法
+
+### 光标移动
+
+- G 到文件尾
+- fn+end 到行尾
+- gg  文件首行 
+- :n  跳到第n行
+- :e 刷新文件
+
+### 操作辅助相关
+
+- 显示行号：set number(set nu)
+- 不显示行号 set nonumber(set nonu)
+- q:  或者 q/显示历史命令
+- set cursorline  可以在当前光标所在行显示一条直线
+- 分屏:  竖直分屏:vsp， 水平分屏:sp
+- ggG= 格式化文档或代码对齐
+
+### 撤销操作
+
+- u  撤销上一步操作
+- ctrl+r   重做
