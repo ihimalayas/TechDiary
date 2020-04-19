@@ -79,3 +79,20 @@
 
 - u  撤销上一步操作
 - ctrl+r   重做
+
+
+## centos 远程ssh访问用户
+
+更改etc/ssh/sshd_config。在其中增加AllowUsers:username(可以多个,空格分开)给普通用户增加ssh权限。
+
+#PermitRootLogin yes
+这一行的“#”去掉，修改为：
+PermitRootLogin yes
+
+## 先备份文件后操作
+
+    cp /etc/ntp.conf{,.bak}
+
+    cp /etc/ntp.conf /etc/ntp.conf.bak
+
+## 
