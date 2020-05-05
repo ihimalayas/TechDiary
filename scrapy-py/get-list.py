@@ -1,6 +1,6 @@
-
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
+
 '''
 @File    :   get-list.py
 @Time    :   2020/03/17 09:39:30
@@ -21,8 +21,11 @@ session = HTMLSession()
 # session.get("https://www.baidu.com")
 # 如果是本地文件，需要以下代码
 # 挂载文件
+
 session.mount('file://', FileAdapter())
+
 # Windows系统路径目录分隔符为反斜杠，但get需要正斜杠所以先进行一下替换
+
 pwd = os.getcwd().replace("\\","/")
 print(pwd)
 # 测试发现使用相对路径读不到文件，需要使用绝对路径
