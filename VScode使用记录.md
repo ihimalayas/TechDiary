@@ -9,3 +9,8 @@
     3. 查找行输入 $ ，替换行输入替换后的文本
     4. Ctrl+Alt+Enter 替换全部
 
+## VSCode 当前文件显示完整路径信息
+
+File->Preferences->Settings
+搜索window.title
+修改 activeEditorShort => activeEditorLong
