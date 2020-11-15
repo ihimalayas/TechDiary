@@ -43,3 +43,10 @@ mysql> SELECT * FROM table LIMIT 5; //检索前 5 个记录行
 
 ```
 
+
+
+## centos7 远程连接其他服务器mysql
+
+在本地远程连接，在终端输入：
+
+    mysql -h 服务器ip地址 -P 端口 -u 用户名 -p
